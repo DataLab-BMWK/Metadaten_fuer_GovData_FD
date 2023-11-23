@@ -1,0 +1,22 @@
+name: merge-turtle-files
+run-name: Merging TTLs
+on:
+  schedule:
+    - cron: '00 21 */1 * *'
+    
+jobs:
+  merge-ttl:
+    runs-on: ubuntu-latest
+    env:
+      destination_file: Bundesministerium_fuer_Wirtschaft_und_Klimaschutz_DCAT-AP.ttl
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+      - name: find Namespaces in a random ttl file and add it to a new merged ttl file
+        run: find ./Datensaetze/*.ttl -type f | head -n 1 | xargs grep -h '@prefix' > ${{ env.destination_file }}
+      - name: Merge content of all ttl files and append it to destination file
+        run: find ./Datensaetze/*.ttl | xargs grep -vh '@prefix' >> ${{ env.destination_file }}
+      - name: Add and Commit Changes
+        uses: EndBug/add-and-commit@v9.0.1
+        with:
+          message: 'Update ${{ env.destination_file }}'
