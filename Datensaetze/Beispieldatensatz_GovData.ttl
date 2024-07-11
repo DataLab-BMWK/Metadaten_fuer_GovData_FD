@@ -1,6 +1,7 @@
 # Mit der Beispieldatei können Metadaten für offene Daten des Bundesministeriums für Wirtschaft und Klimaschutz (BMWK) erstellt werden.
 # Die Metadaten werden im Metadatenmodell DCAT-AP.de (https://www.dcat-ap.de/) erstellt.
-# DCAT-AP.de ist das gemeinsame deutsche Metadatenmodell zum Austausch von offenen Verwaltungsdaten.
+# DCAT-AP.de ist das gemeinsame deutsche Metadatenmodell zum Austausch von offenen Verwaltungsdaten. 
+# Aktuelle Spezifikation von DCAT-AP.de: https://www.dcat-ap.de/def/dcatde/2.0/spec/ (Stand 11.07.2024)
 # Die Metadaten werden in GovData (https://www.govdata.de/) bereitgestellt. GovData ist das Metadatenportal für offene deutsche Verwaltungsdaten.
 
 # Den Abschnitt @prefix nicht verändern
@@ -16,10 +17,16 @@
 # Diesen Abschnitt nicht verändern
 <https://zenodo.org/record/14> a dcat:Dataset ;
 dcatde:contributorID <http://dcat-ap.de/def/contributors/bundesministeriumFuerWirtschaftUndKlimaschutz> ;
-dcatde:maintainer [ a foaf:Agent ; foaf:mbox "opendata@bmwk.bund.de" ; foaf:name "Bundesministerium für Wirtschaft und Klimaschutz | Open Data Team"] ;
-dcatde:contributor [ a foaf:Organization; foaf:name "Open Data Team" ];
+dcatde:maintainer [ a foaf:Agent ; foaf:mbox "opendata@bmwk.bund.de" ; foaf:name "Bundesministerium für Wirtschaft und Klimaschutz"] ;
+dcatde:contributor [ a foaf:Organization; foaf:name "Open-Data-Koordiantion des BMWK" ];
+
+dcat:theme    <http://publications.europa.eu/resource/authority/data-theme/GOVE> .
 # Ende des Abschnitts
-                  
+
+
+# Titel des Datensatzes
+dct:title "Template Datensatz" ;
+
 # Beschreibung der Daten
 # Folgende Fragen sollten in der Beschreibung adressiert werden:
 # 1. Zu welchem Zweck wurden die Daten erhoben/erstellt?
@@ -32,9 +39,9 @@ dcatde:contributor [ a foaf:Organization; foaf:name "Open Data Team" ];
 dct:description "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum <a href=\"http://rki.de\">lorem ipsum</a>.<br>- lorem ipsum<br>- lorem ipsumlorem ipsum" ;
                   
 # Veröffentlichungsdatum der Daten
-dct:issued "2024-07-01T15:00:00+02:00"^^xsd:dateTime ;
+dct:issued "2024-07-01"^^xsd:date ;
  # Letzte Änderung der Daten
-dct:modified "2024-07-01T15:00:00+02:00"^^xsd:dateTime ;
+dct:modified "2024-07-01"^^xsd:date ;
 # Veröffentlichende Stelle der Daten
 dct:publisher [ a foaf:Organization ;
 # E-Mail-Adresse der veröffentlichenden Stelle              
@@ -42,24 +49,13 @@ foaf:mbox "email@email.de" ;
 # Name der veröffentlichenden Stelle
 foaf:name "Name der veröffentlichenden Stelle"
                   ] ;
-# Titel des Datensatzes
-dct:title "Template Datensatz" ;
 
-                  # Diesen Abschnitt die ändern
-                   dcat:contactPoint [ a vcard:Organization ;
-                        vcard:fn "Bundesministerium für Wirtschaft und Klimaschutz | Open Data Team" ;
-                        vcard:hasCountryName "Deutschland" ;
-                        vcard:hasEmail "opendata@bmwk.bund.de";
-                        vcard:hasLocality "Berlin" ;
-                        vcard:hasPostalCode "10115" ;
-                        vcard:hasStreetAddress "Scharnhorststr. 34-37"
-                  ];
+# Verweis auf eine Webseite, die Zugriff auf den Datensatz, seine Distributionen und/oder weitere Informationen ermöglicht.
+dcat:landingPage <https://www.landing-page.io/> ;
 
-dcat:landingPage <https://www.github.io/DataLab-BMWK/Template_Datensatz> ;
-dcat:theme    <http://publications.europa.eu/resource/authority/data-theme/GOVE> .
 
-# Stichwörter zum Datensatz
-dcat:keyword "Stichwort 1","Stichwort 2", "Stichwort 3"; # 5-10 Stichwörter eingeben, die den Datensatz beschreiben
+# 5-10 Stichwörter zur Beschreibung des Datensatzes.
+dcat:keyword "Stichwort 1","Stichwort 2", "Stichwort 3";
 
 
                   # Diesen Abschnitt für jede veröffentlichte Datei wiederholen
