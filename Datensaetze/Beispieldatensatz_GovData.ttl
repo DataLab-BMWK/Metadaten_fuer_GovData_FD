@@ -3,6 +3,7 @@
 # DCAT-AP.de ist das gemeinsame deutsche Metadatenmodell zum Austausch von offenen Verwaltungsdaten.
 # Die Metadaten werden in GovData (https://www.govdata.de/) bereitgestellt. GovData ist das Metadatenportal für offene deutsche Verwaltungsdaten.
 
+# Diesen Abschnitt nicht verändern
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
               @prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
               @prefix dct: <http://purl.org/dc/terms/> .
@@ -11,18 +12,37 @@
               @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
               @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-              <https://zenodo.org/record/14> a dcat:Dataset ; # Wird von BMWK ausgefüllt
+              <https://zenodo.org/record/14> a dcat:Dataset ;
                   dcatde:contributorID <http://dcat-ap.de/def/contributors/bundesministeriumFuerWirtschaftUndKlimaschutz> ;
                   dcatde:maintainer [ a foaf:Agent ; foaf:mbox "opendata@bmwk.bund.de" ; foaf:name "Bundesministerium für Wirtschaft und Klimaschutz | Open Data Team"] ;
                   dcatde:contributor [ a foaf:Organization; foaf:name "Open Data Team" ];
+                  
+                  # Beschreibung der Daten
+                  # Folgende Fragen sollten in der Beschreibung adressiert werden:
+	                # 1. Zu welchem Zweck wurden die Daten erhoben/erstellt?
+	                # 2. Wie wurden die Daten erhoben/erstellt?
+	                # 3. Mit welchen Werkzeugen und Methoden wurden die Daten erhoben/erstellt? Bei der Verwendung von Umfragesoftware sollte der Name und die Version der Software aufgeführt werden.
+	                # 4. Welche Dateien gehören zu der Open-Data-Veröffentlichung? Hier sollten die einzelnen Dateien aufgelistet und ihr Inhalt und ihre Struktur beschrieben werden. Die Definition der einzelnen Spalten kann hier erfolgen oder es wird auf erläuternde Dokumente/Dateien (z.B. Codebooks) verwiesen.
+	                # 5. Wie wurden die Daten vor der Veröffentlichung bearbeitet? Welche Daten wurden entfernt, anonymisiert, gefiltert, generalisiert etc.?
+	                # 6. Gibt es weitere Informationen zu den Daten? Falls ja, wo sind diese veröffentlicht? 
+                  # 7. Sind Publikationen, Studien, Analysen aus den Daten entstanden? Falls ja, wo sind diese veröffentlicht?
                   dct:description "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum <a href=\"http://rki.de\">lorem ipsum</a>.<br>- lorem ipsum<br>- lorem ipsumlorem ipsum" ;
+                  
+                  # Veröffentlichungsdatum der Daten
                   dct:issued "2023-11-23T17:08:53+01:00"^^xsd:dateTime ;
+                  # Letzte Änderung der Daten
                   dct:modified "2023-11-20T12:16:30+02:00"^^xsd:dateTime ;
+                  # Veröffentlichende Stelle der Daten
                   dct:publisher [ a foaf:Organization ;
+                      # E-Mail-Adresse der veröffentlichenden Stelle              
                       foaf:mbox "opendata@bmwk.bund.de" ;
+                      # Name der veröffentlichenen Stelle
                       foaf:name "Bundesministerium für Wirtschaft und Klimaschutz"
                   ] ;
+                  # Titel des Datensatzes
                   dct:title "Template Datensatz" ;
+
+                  # Diesen Abschnitt die ändern
                    dcat:contactPoint [ a vcard:Organization ;
                         vcard:fn "Bundesministerium für Wirtschaft und Klimaschutz | Open Data Team" ;
                         vcard:hasCountryName "Deutschland" ;
@@ -35,15 +55,26 @@
                   dcat:theme    <http://publications.europa.eu/resource/authority/data-theme/HEAL>,
                                 <http://publications.europa.eu/resource/authority/data-theme/SOCI>,
                                 <http://publications.europa.eu/resource/authority/data-theme/TECH>;
+
+                  # Stichwörter zum Datensatz
                   dcat:keyword "Open Data","BMWK";
+
+                  # Lizenz, unter der die Daten veröffentlicht sind. Liste der Lizenzen: https://www.dcat-ap.de/def/licenses/
                   dct:license <http://dcat-ap.de/def/licenses/cc-by/4.0>;
+
+                  # Diesen Abschnitt für jede veröffentlichte Datei wiederholen
                   dcat:distribution [
                     a dcat:Distribution ;
                     dcatde:licenseAttributionByText "Bundesministerium für Wirtschaft und Klimaschutz (2023): Template Datensatz, Berlin: Zenodo. DOI:10.5072/zenodo.829" ;
+                    # Geplante Verfügbarkeit des Datensatzes. Liste der Verfügbarkeitsgrade: https://www.dcat-ap.de/def/plannedAvailability/
                     dcatde:plannedAvailability <http://dcat-ap.de/def/plannedAvailability/stable> ;
+                    # Beschreibung der Datei
                     dct:description "GitHub ist eine soziales Netzwerk und Plattform, die es ermöglicht, Code-Repositories und Datensätze zu hosten, zu verwalten und zu teilen. Es bietet eine Vielzahl von Funktionen wie Versionskontrolle, Fehlerverfolgung, Zusammenarbeit und Teammanagement. GitHub ist eine der bekanntesten und am häufigsten verwendeten Plattformen für die gemeinsame Entwicklung von Software und Code, insbesondere für Open-Source-Projekte.";
+                    # Sprache der Datei
                     dct:language <http://publications.europa.eu/resource/authority/language/DEU> ;
+                     # Lizenz, unter der die Daten veröffentlicht sind. Liste der Lizenzen: https://www.dcat-ap.de/def/licenses/
                     dct:license <http://dcat-ap.de/def/licenses/cc-by/4.0> ;
+                    # Titel der Datei
                     dct:title "Github - Template Datensatz" ;
                     dcat:accessURL <https://github.com/DataLab-BMWK/Template_Datensatz>;
                     dct:modified "2023-11-23T17:08:53+01:00"^^xsd:dateTime;
