@@ -27,7 +27,7 @@ dcat:theme    <http://publications.europa.eu/resource/authority/data-theme/GOVE>
 # Titel des Datensatzes
 dct:title "Template Datensatz" ;
 
-# Beschreibung der Daten
+# Beschreibung des Datensatzes als Freitext
 # Folgende Fragen sollten in der Beschreibung adressiert werden:
 # 1. Zu welchem Zweck wurden die Daten erhoben/erstellt?
 # 2. Wie wurden die Daten erhoben/erstellt?
@@ -53,38 +53,65 @@ foaf:name "Name der veröffentlichenden Stelle"
 # Verweis auf eine Webseite, die Zugriff auf den Datensatz, seine Distributionen und/oder weitere Informationen ermöglicht.
 dcat:landingPage <https://www.landing-page.io/> ;
 
-
 # 5-10 Stichwörter zur Beschreibung des Datensatzes.
 dcat:keyword "Stichwort 1","Stichwort 2", "Stichwort 3";
 
 
-                  # Diesen Abschnitt für jede veröffentlichte Datei wiederholen
+                  # Beschreibung der einzelnen Dateien 
+		  # Diesen Abschnitt für jede veröffentlichte Datei wiederholen
                   dcat:distribution [
                     a dcat:Distribution ;
-                    dcatde:licenseAttributionByText "Bundesministerium für Wirtschaft und Klimaschutz (2023): Template Datensatz, Berlin: Zenodo. DOI:10.5072/zenodo.829" ;
-                    # Geplante Verfügbarkeit des Datensatzes. Liste der Verfügbarkeitsgrade: https://www.dcat-ap.de/def/plannedAvailability/
+                    
+		    # Geplante Verfügbarkeit des Datensatzes. Liste der Verfügbarkeitsgrade: https://www.dcat-ap.de/def/plannedAvailability/
                     dcatde:plannedAvailability <http://dcat-ap.de/def/plannedAvailability/stable> ;
-                    # Beschreibung der Datei
+                    
+		    # Beschreibung der Datei als Freitext
                     dct:description "GitHub ist eine soziales Netzwerk und Plattform, die es ermöglicht, Code-Repositories und Datensätze zu hosten, zu verwalten und zu teilen. Es bietet eine Vielzahl von Funktionen wie Versionskontrolle, Fehlerverfolgung, Zusammenarbeit und Teammanagement. GitHub ist eine der bekanntesten und am häufigsten verwendeten Plattformen für die gemeinsame Entwicklung von Software und Code, insbesondere für Open-Source-Projekte.";
-                    # Sprache der Datei
+                    
+		    # Sprache der Datei
                     dct:language <http://publications.europa.eu/resource/authority/language/DEU> ;
+		    
                      # Lizenz, unter der die Daten veröffentlicht sind. Liste der Lizenzen: https://www.dcat-ap.de/def/licenses/
                     dct:license <http://dcat-ap.de/def/licenses/cc-by/4.0> ;
+		    
+		    # Namensnennungstext bei Lizenzangaben
+		    dcatde:licenseAttributionByText "Bundesministerium für Wirtschaft und Klimaschutz (2023): Template Datensatz, Berlin: Zenodo. DOI:10.5072/zenodo.829" ;
+		    
                     # Titel der Datei
                     dct:title "Datei XY" ;
+		    
+		    # URL-Adresse, die Zugriff auf die Distribution eines Datensatzes ermöglicht.
+		    # Die mit der Zugangs-URL erreichbare Ressource kann Informationen zur Verfügung stellen, wie die Distribution erreicht werden kann oder direkt auf eine Datei verweisen, die die Daten im angegebenen Format beinhaltet.
                     dcat:accessURL <https://github.com/DataLab-BMWK/Template_Datensatz>;
-                    dct:modified "2024-07-01T15:00:00+02:00"^^xsd:dateTime;
+                    
+		    dct:modified "2024-07-01T15:00:00+02:00"^^xsd:dateTime;
                   ],
 		# Wiederholung für eine weitere Datei
                   [
-                    a dcat:Distribution ;
-                    dcatde:licenseAttributionByText "Bundesministerium für Wirtschaft und Klimaschutz (2023): Template Datensatz, Berlin: Zenodo. DOI:10.5072/zenodo.829" ;
+                  a dcat:Distribution ;
+                    
+		    # Geplante Verfügbarkeit des Datensatzes. Liste der Verfügbarkeitsgrade: https://www.dcat-ap.de/def/plannedAvailability/
                     dcatde:plannedAvailability <http://dcat-ap.de/def/plannedAvailability/stable> ;
-                    dct:description "Zenodo ist eine europäische Plattform, die es Forschern, Wissenschaftlern und anderen Personen ermöglicht, Forschungsdaten, Publikationen, Präsentationen und andere wissenschaftliche Inhalte kostenlos zu teilen und zu veröffentlichen. Eine der Hauptstärken von Zenodo ist die Bereitstellung der Daten nach den FAIR Prinzipien, Daten sind langzeitarchiviert und wissenschaftlich zitierbar, um den Datenaustausch und die Zusammenarbeit zwischen Forschern zu erleichtern.";
+                    
+		    # Beschreibung der Datei als Freitext
+                    dct:description "GitHub ist eine soziales Netzwerk und Plattform, die es ermöglicht, Code-Repositories und Datensätze zu hosten, zu verwalten und zu teilen. Es bietet eine Vielzahl von Funktionen wie Versionskontrolle, Fehlerverfolgung, Zusammenarbeit und Teammanagement. GitHub ist eine der bekanntesten und am häufigsten verwendeten Plattformen für die gemeinsame Entwicklung von Software und Code, insbesondere für Open-Source-Projekte.";
+                    
+		    # Sprache der Datei
                     dct:language <http://publications.europa.eu/resource/authority/language/DEU> ;
+		    
+                     # Lizenz, unter der die Daten veröffentlicht sind. Liste der Lizenzen: https://www.dcat-ap.de/def/licenses/
                     dct:license <http://dcat-ap.de/def/licenses/cc-by/4.0> ;
-                    dct:title "Zenodo - Template Datensatz" ;
-                    dcat:accessURL <https://zenodo.org/record/14>;
-                    dct:modified "2023-11-23T17:08:53+01:00"^^xsd:dateTime;
-                  ].
+		    
+		    # Namensnennungstext bei Lizenzangaben
+		    dcatde:licenseAttributionByText "Bundesministerium für Wirtschaft und Klimaschutz (2023): Template Datensatz, Berlin: Zenodo. DOI:10.5072/zenodo.829" ;
+		    
+                    # Titel der Datei
+                    dct:title "Datei XY" ;
+		    
+		    # URL-Adresse, die Zugriff auf die Distribution eines Datensatzes ermöglicht.
+		    # Die mit der Zugangs-URL erreichbare Ressource kann Informationen zur Verfügung stellen, wie die Distribution erreicht werden kann oder direkt auf eine Datei verweisen, die die Daten im angegebenen Format beinhaltet.
+                    dcat:accessURL <https://github.com/DataLab-BMWK/Template_Datensatz>;
+                    
+		    dct:modified "2024-07-01T15:00:00+02:00"^^xsd:dateTime;
+                  ] .
                  
