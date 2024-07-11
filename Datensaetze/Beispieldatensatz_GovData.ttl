@@ -3,44 +3,47 @@
 # DCAT-AP.de ist das gemeinsame deutsche Metadatenmodell zum Austausch von offenen Verwaltungsdaten.
 # Die Metadaten werden in GovData (https://www.govdata.de/) bereitgestellt. GovData ist das Metadatenportal für offene deutsche Verwaltungsdaten.
 
-# Diesen Abschnitt nicht verändern
+# Den Abschnitt @prefix nicht verändern
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
-              @prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
-              @prefix dct: <http://purl.org/dc/terms/> .
-              @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-              @prefix schema: <http://schema.org/> .
-              @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
-              @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <http://schema.org/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+# Ende Abschnitt @prefix
 
-              <https://zenodo.org/record/14> a dcat:Dataset ;
-                  dcatde:contributorID <http://dcat-ap.de/def/contributors/bundesministeriumFuerWirtschaftUndKlimaschutz> ;
-                  dcatde:maintainer [ a foaf:Agent ; foaf:mbox "opendata@bmwk.bund.de" ; foaf:name "Bundesministerium für Wirtschaft und Klimaschutz | Open Data Team"] ;
-                  dcatde:contributor [ a foaf:Organization; foaf:name "Open Data Team" ];
+# Diesen Abschnitt nicht verändern
+<https://zenodo.org/record/14> a dcat:Dataset ;
+dcatde:contributorID <http://dcat-ap.de/def/contributors/bundesministeriumFuerWirtschaftUndKlimaschutz> ;
+dcatde:maintainer [ a foaf:Agent ; foaf:mbox "opendata@bmwk.bund.de" ; foaf:name "Bundesministerium für Wirtschaft und Klimaschutz | Open Data Team"] ;
+dcatde:contributor [ a foaf:Organization; foaf:name "Open Data Team" ];
+# Ende des Abschnitts
                   
-                  # Beschreibung der Daten
-                  # Folgende Fragen sollten in der Beschreibung adressiert werden:
-	                # 1. Zu welchem Zweck wurden die Daten erhoben/erstellt?
-	                # 2. Wie wurden die Daten erhoben/erstellt?
-	                # 3. Mit welchen Werkzeugen und Methoden wurden die Daten erhoben/erstellt? Bei der Verwendung von Umfragesoftware sollte der Name und die Version der Software aufgeführt werden.
-	                # 4. Welche Dateien gehören zu der Open-Data-Veröffentlichung? Hier sollten die einzelnen Dateien aufgelistet und ihr Inhalt und ihre Struktur beschrieben werden. Die Definition der einzelnen Spalten kann hier erfolgen oder es wird auf erläuternde Dokumente/Dateien (z.B. Codebooks) verwiesen.
-	                # 5. Wie wurden die Daten vor der Veröffentlichung bearbeitet? Welche Daten wurden entfernt, anonymisiert, gefiltert, generalisiert etc.?
-	                # 6. Gibt es weitere Informationen zu den Daten? Falls ja, wo sind diese veröffentlicht? 
-                  # 7. Sind Publikationen, Studien, Analysen aus den Daten entstanden? Falls ja, wo sind diese veröffentlicht?
-                  dct:description "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum <a href=\"http://rki.de\">lorem ipsum</a>.<br>- lorem ipsum<br>- lorem ipsumlorem ipsum" ;
+# Beschreibung der Daten
+# Folgende Fragen sollten in der Beschreibung adressiert werden:
+# 1. Zu welchem Zweck wurden die Daten erhoben/erstellt?
+# 2. Wie wurden die Daten erhoben/erstellt?
+# 3. Mit welchen Werkzeugen und Methoden wurden die Daten erhoben/erstellt? Bei der Verwendung von Umfragesoftware sollte der Name und die Version der Software aufgeführt werden.
+# 4. Welche Dateien gehören zu der Open-Data-Veröffentlichung? Hier sollten die einzelnen Dateien aufgelistet und ihr Inhalt und ihre Struktur beschrieben werden. Die Definition der einzelnen Spalten kann hier erfolgen oder es wird auf erläuternde Dokumente/Dateien (z.B. Codebooks) verwiesen.
+# 5. Wie wurden die Daten vor der Veröffentlichung bearbeitet? Welche Daten wurden entfernt, anonymisiert, gefiltert, generalisiert etc.?
+# 6. Gibt es weitere Informationen zu den Daten? Falls ja, wo sind diese veröffentlicht? 
+# 7. Sind Publikationen, Studien, Analysen aus den Daten entstanden? Falls ja, wo sind diese veröffentlicht?
+dct:description "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum <a href=\"http://rki.de\">lorem ipsum</a>.<br>- lorem ipsum<br>- lorem ipsumlorem ipsum" ;
                   
-                  # Veröffentlichungsdatum der Daten
-                  dct:issued "2023-11-23T17:08:53+01:00"^^xsd:dateTime ;
-                  # Letzte Änderung der Daten
-                  dct:modified "2023-11-20T12:16:30+02:00"^^xsd:dateTime ;
-                  # Veröffentlichende Stelle der Daten
-                  dct:publisher [ a foaf:Organization ;
-                      # E-Mail-Adresse der veröffentlichenden Stelle              
-                      foaf:mbox "opendata@bmwk.bund.de" ;
-                      # Name der veröffentlichenen Stelle
-                      foaf:name "Bundesministerium für Wirtschaft und Klimaschutz"
+# Veröffentlichungsdatum der Daten
+dct:issued "2024-07-01T15:00:00+02:00"^^xsd:dateTime ;
+ # Letzte Änderung der Daten
+dct:modified "2024-07-01T15:00:00+02:00"^^xsd:dateTime ;
+# Veröffentlichende Stelle der Daten
+dct:publisher [ a foaf:Organization ;
+# E-Mail-Adresse der veröffentlichenden Stelle              
+foaf:mbox "email@email.de" ;
+# Name der veröffentlichenden Stelle
+foaf:name "Name der veröffentlichenden Stelle"
                   ] ;
-                  # Titel des Datensatzes
-                  dct:title "Template Datensatz" ;
+# Titel des Datensatzes
+dct:title "Template Datensatz" ;
 
                   # Diesen Abschnitt die ändern
                    dcat:contactPoint [ a vcard:Organization ;
@@ -51,16 +54,13 @@
                         vcard:hasPostalCode "10115" ;
                         vcard:hasStreetAddress "Scharnhorststr. 34-37"
                   ];
-                  dcat:landingPage <https://www.github.io/DataLab-BMWK/Template_Datensatz>;
-                  dcat:theme    <http://publications.europa.eu/resource/authority/data-theme/HEAL>,
-                                <http://publications.europa.eu/resource/authority/data-theme/SOCI>,
-                                <http://publications.europa.eu/resource/authority/data-theme/TECH>;
 
-                  # Stichwörter zum Datensatz
-                  dcat:keyword "Open Data","BMWK";
+dcat:landingPage <https://www.github.io/DataLab-BMWK/Template_Datensatz> ;
+dcat:theme    <http://publications.europa.eu/resource/authority/data-theme/GOVE> .
 
-                  # Lizenz, unter der die Daten veröffentlicht sind. Liste der Lizenzen: https://www.dcat-ap.de/def/licenses/
-                  dct:license <http://dcat-ap.de/def/licenses/cc-by/4.0>;
+# Stichwörter zum Datensatz
+dcat:keyword "Stichwort 1","Stichwort 2", "Stichwort 3"; # 5-10 Stichwörter eingeben, die den Datensatz beschreiben
+
 
                   # Diesen Abschnitt für jede veröffentlichte Datei wiederholen
                   dcat:distribution [
@@ -75,10 +75,11 @@
                      # Lizenz, unter der die Daten veröffentlicht sind. Liste der Lizenzen: https://www.dcat-ap.de/def/licenses/
                     dct:license <http://dcat-ap.de/def/licenses/cc-by/4.0> ;
                     # Titel der Datei
-                    dct:title "Github - Template Datensatz" ;
+                    dct:title "Datei XY" ;
                     dcat:accessURL <https://github.com/DataLab-BMWK/Template_Datensatz>;
-                    dct:modified "2023-11-23T17:08:53+01:00"^^xsd:dateTime;
+                    dct:modified "2024-07-01T15:00:00+02:00"^^xsd:dateTime;
                   ],
+		# Wiederholung für eine weitere Datei
                   [
                     a dcat:Distribution ;
                     dcatde:licenseAttributionByText "Bundesministerium für Wirtschaft und Klimaschutz (2023): Template Datensatz, Berlin: Zenodo. DOI:10.5072/zenodo.829" ;
@@ -89,16 +90,5 @@
                     dct:title "Zenodo - Template Datensatz" ;
                     dcat:accessURL <https://zenodo.org/record/14>;
                     dct:modified "2023-11-23T17:08:53+01:00"^^xsd:dateTime;
-                  ],
-                  [
-                    a dcat:Distribution ;
-                    dct:title "[Dokumentation]_Template_Datensatz.pdf" ;
-                    dcatde:licenseAttributionByText "Bundesministerium für Wirtschaft und Klimaschutz (2023): Template Datensatz, Berlin: Zenodo. DOI:10.5072/zenodo.829" ;
-                    dcatde:plannedAvailability <http://dcat-ap.de/def/plannedAvailability/stable> ;
-                    dct:description "Die Datensatzdokumentation enthält Informationen und Hinweise zum Entstehungskontext, dem Aufbau und der Nachnutzung der im Datensatz 'Open Data - Sandbox' bereitgestellten Daten" ;
-                    dct:format <http://publications.europa.eu/resource/authority/file-type/PDF> ;
-                    dct:language <http://publications.europa.eu/resource/authority/language/DEU> ;
-                    dct:license <http://dcat-ap.de/def/licenses/cc-by/4.0> ;
-                    dcat:accessURL <https://github.com/DataLab-BMWK/Template_Datensatz/blob/main/%5BDokumentation%5D_Template_Datensatz.pdf>;
-                    dct:modified "2023-11-23T17:08:53+01:00"^^xsd:dateTime;
                   ].
+                 
