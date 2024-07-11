@@ -13,4 +13,6 @@ DCAT-AP.de ist die deutsche Adaption des „Data Catalogue Application Profile�
 
 Eine ausführliche Dokumentation des Metadatenstandards DACT-AP.de ist unter [www.dcat-ap.de](https://www.dcat-ap.de/) zu finden. Der Metadatenstandard wird partiziaptiv in Github (https://github.com/GovDataOfficial/DCAT-AP.de) entwickelt und ist unter https://www.dcat-ap.de/def/dcatde/2.0/spec/ spezifiziert.  
 
+Für die Metadatensätze des BMWK müssen folgende Metadaten von der veröffentlichenden Stelle bereitgestellt werden: [Hier noch ein Tabelle der anzugebenden Attribute einfügen?]
+
 
