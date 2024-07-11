@@ -20,9 +20,8 @@ dcatde:contributorID <http://dcat-ap.de/def/contributors/bundesministeriumFuerWi
 dcatde:maintainer [ a foaf:Agent ; foaf:mbox "opendata@bmwk.bund.de" ; foaf:name "Bundesministerium für Wirtschaft und Klimaschutz"] ;
 dcatde:contributor [ a foaf:Organization; foaf:name "Open-Data-Koordiantion des BMWK" ];
 
-dcat:theme    <http://publications.europa.eu/resource/authority/data-theme/GOVE> .
+dcat:theme    <http://publications.europa.eu/resource/authority/data-theme/GOVE> ;
 # Ende des Abschnitts
-
 
 # Titel des Datensatzes
 dct:title "Template Datensatz" ;
@@ -54,7 +53,7 @@ foaf:name "Name der veröffentlichenden Stelle"
 dcat:landingPage <https://www.landing-page.io/> ;
 
 # 5-10 Stichwörter zur Beschreibung des Datensatzes.
-dcat:keyword "Stichwort 1","Stichwort 2", "Stichwort 3";
+dcat:keyword "Stichwort 1","Stichwort 2", "Stichwort 3" .
 
 
                   # Beschreibung der einzelnen Dateien 
