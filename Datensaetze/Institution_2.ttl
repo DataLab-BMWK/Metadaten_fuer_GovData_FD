@@ -1,3 +1,5 @@
+# Test 3
+
 # Mit der Beispieldatei können Metadaten für offene Daten des Bundesministeriums für Wirtschaft und Klimaschutz (BMWK) erstellt werden.
 # Die Metadaten werden im Metadatenmodell DCAT-AP.de (https://www.dcat-ap.de/) erstellt.
 # DCAT-AP.de ist das gemeinsame deutsche Metadatenmodell zum Austausch von offenen Verwaltungsdaten. 
