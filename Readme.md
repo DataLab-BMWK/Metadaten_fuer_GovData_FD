@@ -5,9 +5,11 @@
 
 ## Einleitung
 
-Das Repository stellt einen beispielhaften Metadatensatz im TTL-Format für den Import von Metadaten des BMWK in [GovData.de](https://GovData.de) bereit. Der Beispieldatensatz [`Beispieldatensatz_GovData.ttl`](Datensaetze/Beispieldatensatz_GovData.ttl) kann ausgefüllt werden und über einen Push-Request ins Repository aufgenommen werden.
+Das Repository stellt einen beispielhaften Metadatensatz im TTL-Format für den Import von Metadaten des BMWK in [GovData.de](https://GovData.de) bereit. Nach der Veröffentlichung von Daten in einem Datenrepositorium kann der Beispieldatensatz [`Beispieldatensatz_GovData.ttl`](Datensaetze/Beispieldatensatz_GovData.ttl) ausgefüllt werden und über einen Push-Request ins Repository aufgenommen werden.
 
 Die einzelnen Metadaten werden in der [`Bundesministerium_fuer_Wirtschaft_und_Klimaschutz_DCAT-AP.ttl`](Bundesministerium_fuer_Wirtschaft_und_Klimaschutz_DCAT-AP.ttl) zusammengeführt und an GovData übergeben. 
+
+Der ausgefüllte Metadatensatz kann auch als TTL- oder TXT-Datei an opendata@bmwk.bund.de gesendet werden.
 
 DCAT-AP.de ist die deutsche Adaption des „Data Catalogue Application Profile“ [(DCAT-AP)](https://github.com/SEMICeu/DCAT-AP) für Datenportale in Europa[[1]](https://github.com/GovDataOfficial/DCAT-AP.de).
 
