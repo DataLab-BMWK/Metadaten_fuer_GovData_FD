@@ -1,0 +1,118 @@
+# TEST für Workflow
+
+# Mit der Beispieldatei können Metadaten für offene Daten des Bundesministeriums für Wirtschaft und Klimaschutz (BMWK) erstellt werden.
+# Die Metadaten werden im Metadatenmodell DCAT-AP.de (https://www.dcat-ap.de/) erstellt.
+# DCAT-AP.de ist das gemeinsame deutsche Metadatenmodell zum Austausch von offenen Verwaltungsdaten. 
+# Aktuelle Spezifikation von DCAT-AP.de: https://www.dcat-ap.de/def/dcatde/2.0/spec/ (Stand 11.07.2024)
+# Die Metadaten werden in GovData (https://www.govdata.de/) bereitgestellt. GovData ist das Metadatenportal für offene deutsche Verwaltungsdaten.
+
+# Den Abschnitt @prefix nicht verändern
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <http://schema.org/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+# Ende Abschnitt @prefix
+
+# Diesen Abschnitt nicht verändern
+<https://zenodo.org/record/14> a dcat:Dataset ;
+dcatde:contributorID <http://dcat-ap.de/def/contributors/bundesministeriumFuerWirtschaftUndKlimaschutz> ;
+dcatde:maintainer [ a foaf:Agent ; foaf:mbox "opendata@bmwk.bund.de" ; foaf:name "Bundesministerium für Wirtschaft und Klimaschutz"] ;
+dcatde:contributor [ a foaf:Organization; foaf:name "Open-Data-Koordiantion des BMWK" ];
+
+dcat:theme    <http://publications.europa.eu/resource/authority/data-theme/GOVE> ;
+# Ende des Abschnitts
+
+# Titel des Datensatzes
+dct:title "Template Datensatz" ;
+
+# Beschreibung des Datensatzes als Freitext
+# Folgende Fragen sollten in der Beschreibung adressiert werden:
+# 1. Zu welchem Zweck wurden die Daten erhoben/erstellt?
+# 2. Wie wurden die Daten erhoben/erstellt?
+# 3. Mit welchen Werkzeugen und Methoden wurden die Daten erhoben/erstellt? Bei der Verwendung von Umfragesoftware sollte der Name und die Version der Software aufgeführt werden.
+# 4. Welche Dateien gehören zu der Open-Data-Veröffentlichung? Hier sollten die einzelnen Dateien aufgelistet und ihr Inhalt und ihre Struktur beschrieben werden. Die Definition der einzelnen Spalten kann hier erfolgen oder es wird auf erläuternde Dokumente/Dateien (z.B. Codebooks) verwiesen.
+# 5. Wie wurden die Daten vor der Veröffentlichung bearbeitet? Welche Daten wurden entfernt, anonymisiert, gefiltert, generalisiert etc.?
+# 6. Gibt es weitere Informationen zu den Daten? Falls ja, wo sind diese veröffentlicht? 
+# 7. Sind Publikationen, Studien, Analysen aus den Daten entstanden? Falls ja, wo sind diese veröffentlicht?
+dct:description "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum <a href=\"http://rki.de\">lorem ipsum</a>.<br>- lorem ipsum<br>- lorem ipsumlorem ipsum" ;
+                  
+# Veröffentlichungsdatum der Daten
+dct:issued "2024-07-01"^^xsd:date ;
+ # Letzte Änderung der Daten
+dct:modified "2024-07-01"^^xsd:date ;
+# Veröffentlichende Stelle der Daten
+dct:publisher [ a foaf:Organization ;
+# E-Mail-Adresse der veröffentlichenden Stelle              
+foaf:mbox "email@email.de" ;
+# Name der veröffentlichenden Stelle
+foaf:name "Name der veröffentlichenden Stelle"
+                  ] ;
+
+# Verweis auf eine Webseite, die Zugriff auf den Datensatz, seine Distributionen und/oder weitere Informationen ermöglicht.
+dcat:landingPage <https://www.landing-page.io/> ;
+
+# 5-10 Stichwörter zur Beschreibung des Datensatzes.
+dcat:keyword "Stichwort 1","Stichwort 2", "Stichwort 3" .
+
+
+                  # Beschreibung der einzelnen Dateien 
+		  # Diesen Abschnitt für jede veröffentlichte Datei wiederholen
+                  dcat:distribution [
+                    a dcat:Distribution ;
+                    
+		    # Geplante Verfügbarkeit des Datensatzes. Liste der Verfügbarkeitsgrade: https://www.dcat-ap.de/def/plannedAvailability/
+                    dcatde:plannedAvailability <http://dcat-ap.de/def/plannedAvailability/stable> ;
+                    
+		    # Beschreibung der Datei als Freitext
+                    dct:description "GitHub ist eine soziales Netzwerk und Plattform, die es ermöglicht, Code-Repositories und Datensätze zu hosten, zu verwalten und zu teilen. Es bietet eine Vielzahl von Funktionen wie Versionskontrolle, Fehlerverfolgung, Zusammenarbeit und Teammanagement. GitHub ist eine der bekanntesten und am häufigsten verwendeten Plattformen für die gemeinsame Entwicklung von Software und Code, insbesondere für Open-Source-Projekte.";
+                    
+		    # Sprache der Datei
+                    dct:language <http://publications.europa.eu/resource/authority/language/DEU> ;
+		    
+                     # Lizenz, unter der die Daten veröffentlicht sind. Liste der Lizenzen: https://www.dcat-ap.de/def/licenses/
+                    dct:license <http://dcat-ap.de/def/licenses/cc-by/4.0> ;
+		    
+		    # Namensnennungstext bei Lizenzangaben
+		    dcatde:licenseAttributionByText "Bundesministerium für Wirtschaft und Klimaschutz (2023): Template Datensatz, Berlin: Zenodo. DOI:10.5072/zenodo.829" ;
+		    
+                    # Titel der Datei
+                    dct:title "Datei XY" ;
+		    
+		    # URL-Adresse, die Zugriff auf die Distribution eines Datensatzes ermöglicht.
+		    # Die mit der Zugangs-URL erreichbare Ressource kann Informationen zur Verfügung stellen, wie die Distribution erreicht werden kann oder direkt auf eine Datei verweisen, die die Daten im angegebenen Format beinhaltet.
+                    dcat:accessURL <https://github.com/DataLab-BMWK/Template_Datensatz>;
+                    
+		    dct:modified "2024-07-01T15:00:00+02:00"^^xsd:dateTime;
+                  ],
+		# Wiederholung für eine weitere Datei
+                  [
+                  a dcat:Distribution ;
+                    
+		    # Geplante Verfügbarkeit des Datensatzes. Liste der Verfügbarkeitsgrade: https://www.dcat-ap.de/def/plannedAvailability/
+                    dcatde:plannedAvailability <http://dcat-ap.de/def/plannedAvailability/stable> ;
+                    
+		    # Beschreibung der Datei als Freitext
+                    dct:description "GitHub ist eine soziales Netzwerk und Plattform, die es ermöglicht, Code-Repositories und Datensätze zu hosten, zu verwalten und zu teilen. Es bietet eine Vielzahl von Funktionen wie Versionskontrolle, Fehlerverfolgung, Zusammenarbeit und Teammanagement. GitHub ist eine der bekanntesten und am häufigsten verwendeten Plattformen für die gemeinsame Entwicklung von Software und Code, insbesondere für Open-Source-Projekte.";
+                    
+		    # Sprache der Datei
+                    dct:language <http://publications.europa.eu/resource/authority/language/DEU> ;
+		    
+                     # Lizenz, unter der die Daten veröffentlicht sind. Liste der Lizenzen: https://www.dcat-ap.de/def/licenses/
+                    dct:license <http://dcat-ap.de/def/licenses/cc-by/4.0> ;
+		    
+		    # Namensnennungstext bei Lizenzangaben
+		    dcatde:licenseAttributionByText "Bundesministerium für Wirtschaft und Klimaschutz (2023): Template Datensatz, Berlin: Zenodo. DOI:10.5072/zenodo.829" ;
+		    
+                    # Titel der Datei
+                    dct:title "Datei XY" ;
+		    
+		    # URL-Adresse, die Zugriff auf die Distribution eines Datensatzes ermöglicht.
+		    # Die mit der Zugangs-URL erreichbare Ressource kann Informationen zur Verfügung stellen, wie die Distribution erreicht werden kann oder direkt auf eine Datei verweisen, die die Daten im angegebenen Format beinhaltet.
+                    dcat:accessURL <https://github.com/DataLab-BMWK/Template_Datensatz>;
+                    
+		    dct:modified "2024-07-01T15:00:00+02:00"^^xsd:dateTime;
+                  ] .
+                 
